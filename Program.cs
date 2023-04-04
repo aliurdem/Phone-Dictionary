@@ -22,19 +22,19 @@ internal class Program
 
             switch (chooice) {
                 case "1":
-                    phoneDictionary.addCard();
+                    phoneDictionary.AddCard();
                     break;
                 case "2":
-                    phoneDictionary.removeCard();
+                    phoneDictionary.RemoveCard();
                     break;
                 case "3":
-                    phoneDictionary.updateNumber();
+                    phoneDictionary.UpdateNumber();
                     break;
                 case "4":
-                    phoneDictionary.listCards();
+                    phoneDictionary.ListCards();
                     break;
                 case "5":
-                    phoneDictionary.searchCard();
+                    phoneDictionary.SearchCard();
                     break;
                 case "6": 
                     return;

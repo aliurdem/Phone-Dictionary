@@ -11,7 +11,7 @@ namespace PhoneDirectory
     {
         List<Card> cards = new List<Card>();
 
-        public void addCard() {
+        public void AddCard() {
             Console.Write("Enter Name : "); 
             string name = Console.ReadLine().Trim();
             Console.Write("Enter Surname : ");
@@ -36,7 +36,7 @@ namespace PhoneDirectory
           
         }
 
-        public void removeCard() {
+        public void RemoveCard() {
             while (true) {
                 Console.Write("Numarasını silmek istediğiniz kişinin adını veya soyadını giriniz : ");
             string entry = Console.ReadLine().Trim();
@@ -84,7 +84,7 @@ namespace PhoneDirectory
                 
         }
 
-        public void updateNumber() {
+        public void UpdateNumber() {
             string cardToUpdate;
 
             Console.Write("Güncellemek istediğiniz kişinin adnı veya soy adını giriniz : ");
@@ -93,8 +93,8 @@ namespace PhoneDirectory
             foreach (Card card in cards) {
                 if (card.Name.Equals(cardToUpdate) || card.SurName.Equals(cardToUpdate))
                 {
-                    Console.Write("Yeni Numarayı Giriniz : ");
-                    string newNumber = Console.ReadLine().Trim();
+                    string newNumber;
+
                     // Girilen telefon numarsının uygun formatta olması için regex kontrolü
                     while (true)
                     {
@@ -123,24 +123,24 @@ namespace PhoneDirectory
                 switch (answer)
                 {
                     case "1":
-                        updateNumber();
+                        UpdateNumber();
                         break;
 
                     case "2":
                         return;
 
                     case "3":
-                        addCard();
+                        AddCard();
                         break;
 
                     default:
-                        Console.WriteLine("Geçersiz seçene !");
+                        Console.WriteLine("Geçersiz seçenek !");
                         break;
 
                  }   
         }
 
-        public void listCards() {
+        public void ListCards() {
             if (cards.Count != 0)
             {
                 Console.Write("1 - A-Z" +
@@ -163,7 +163,7 @@ namespace PhoneDirectory
            
         }
 
-        public void searchCard() {
+        public void SearchCard() {
             while (true) {
                 Console.Write("Aramak istediğiniz kişinin adını, soyadını veya telfon numarsını giriniz : ");
                 string dataToSearch = Console.ReadLine().Trim();
